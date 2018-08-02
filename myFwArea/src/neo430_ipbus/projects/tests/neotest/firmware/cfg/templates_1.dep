@@ -1,0 +1,15 @@
+src neo430_test_top.vhd
+
+@device_family = "artix7"
+@device_name = "xc7a35t"
+@device_package = "fgg484"
+@device_speed = "-1"
+@boardname = "atfc"
+
+include -c neo430_ipbus:components/neo430 CORE.dep
+include -c neo430_ipbus:components/opencores_i2c opencores_i2c.dep
+include -c timing-board-firmware:boards/atfc/base_fw/synth atfc_a35_example.dep
+
+src -c neo430_ipbus:rtl/core ../../neo430_application_image.vhd
+
+src --cd ../ucf neo430_test.tcl

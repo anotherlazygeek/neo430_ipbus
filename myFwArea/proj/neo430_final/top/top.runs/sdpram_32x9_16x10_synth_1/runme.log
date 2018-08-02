@@ -1,0 +1,35 @@
+
+*** Running vivado
+    with args -log sdpram_32x9_16x10.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sdpram_32x9_16x10.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source sdpram_32x9_16x10.tcl -notrace
+Command: synth_design -top sdpram_32x9_16x10 -part xc7a35tfgg484-1 -mode out_of_context
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'sdpram_32x9_16x10' is locked:
+* IP 'sdpram_32x9_16x10' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+* IP definition 'Block Memory Generator (8.2)' for IP 'sdpram_32x9_16x10' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+* Current project part 'xc7a35tfgg484-1' and the part 'xc7vx690tffg1927-2' used to customize the IP 'sdpram_32x9_16x10' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5748 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 388.781 ; gain = 102.793
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-439] module 'sdpram_32x9_16x10' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 443.691 ; gain = 157.703
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 14 15:41:17 2018...

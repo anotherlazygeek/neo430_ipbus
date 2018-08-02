@@ -1,0 +1,3 @@
+src ts_source.vhd
+addrtab tstamp.xml
+include -c ipbus-firmware:components/ipbus_slaves ipbus_ctrs_v.dep

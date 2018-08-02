@@ -1,0 +1,5 @@
+XSym
+0047
+5acc599dcd240b035cd9a659a37899ff
+../../../../components/pdts/software/I2CuHal.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

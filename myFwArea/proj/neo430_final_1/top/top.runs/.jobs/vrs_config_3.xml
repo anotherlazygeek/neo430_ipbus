@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="sdpram_32x9_16x10_synth_1" LaunchDir="/usersc/ng18731/neo430_test/myFwArea/proj/neo430_final_1/top/top.runs/sdpram_32x9_16x10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

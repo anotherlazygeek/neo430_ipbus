@@ -1,0 +1,14 @@
+src neo430_top.vhd
+
+@device_family = "artix7"
+@device_name = "xc7a35t"
+@device_package = "fgg484"
+@device_speed = "-1"
+@boardname = "atfc"
+
+include -c neo430_ipbus:components/neo430 CORE.dep
+
+src -c neo430:rtl/top_templates neo430_test.vhd
+src -c neo430:rtl/top_templates neo430_top_avm.vhd
+src -c neo430:rtl/top_templates neo430_top_axi4lite.vhd
+src -c neo430:rtl/top_templates neo430_top_std_logic.vhd

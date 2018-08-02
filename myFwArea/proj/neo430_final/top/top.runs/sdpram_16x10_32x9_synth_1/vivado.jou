@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sat Jul 14 15:40:46 2018
+# Process ID: 5900
+# Current directory: C:/Users/USER/Desktop/projects/ATFC_IPBus_neo_test/neo430_test/myFwArea/proj/neo430_final/top/top.runs/sdpram_16x10_32x9_synth_1
+# Command line: vivado.exe -log sdpram_16x10_32x9.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sdpram_16x10_32x9.tcl
+# Log file: C:/Users/USER/Desktop/projects/ATFC_IPBus_neo_test/neo430_test/myFwArea/proj/neo430_final/top/top.runs/sdpram_16x10_32x9_synth_1/sdpram_16x10_32x9.vds
+# Journal file: C:/Users/USER/Desktop/projects/ATFC_IPBus_neo_test/neo430_test/myFwArea/proj/neo430_final/top/top.runs/sdpram_16x10_32x9_synth_1\vivado.jou
+#-----------------------------------------------------------
+source sdpram_16x10_32x9.tcl -notrace

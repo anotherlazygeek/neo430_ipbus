@@ -1,0 +1,1165 @@
+
+*** Running vivado
+    with args -log neo430_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neo430_test.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source neo430_test.tcl -notrace
+Command: synth_design -top neo430_test -part xc7a35tfgg484-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27107 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1383.918 ; gain = 85.000 ; free physical = 13711 ; free virtual = 34475
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'neo430_test' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/top_templates/firmware/hdl/neo430_test.vhd:50]
+	Parameter CLOCK_SPEED bound to: 100000000 - type: integer 
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+	Parameter USER_CODE bound to: 16'b1100101011111110 
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter MULDIV_USE bound to: 1 - type: bool 
+	Parameter WB32_USE bound to: 1 - type: bool 
+	Parameter WDT_USE bound to: 1 - type: bool 
+	Parameter GPIO_USE bound to: 1 - type: bool 
+	Parameter TIMER_USE bound to: 1 - type: bool 
+	Parameter USART_USE bound to: 1 - type: bool 
+	Parameter CRC_USE bound to: 1 - type: bool 
+	Parameter CFU_USE bound to: 0 - type: bool 
+	Parameter PWM_USE bound to: 1 - type: bool 
+	Parameter TRNG_USE bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_top' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:58' bound to instance 'neo430_top_test_inst' of component 'neo430_top' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/top_templates/firmware/hdl/neo430_test.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'neo430_top' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:114]
+	Parameter CLOCK_SPEED bound to: 100000000 - type: integer 
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+	Parameter USER_CODE bound to: 16'b1100101011111110 
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter MULDIV_USE bound to: 1 - type: bool 
+	Parameter WB32_USE bound to: 1 - type: bool 
+	Parameter WDT_USE bound to: 1 - type: bool 
+	Parameter GPIO_USE bound to: 1 - type: bool 
+	Parameter TIMER_USE bound to: 1 - type: bool 
+	Parameter USART_USE bound to: 1 - type: bool 
+	Parameter CRC_USE bound to: 1 - type: bool 
+	Parameter CFU_USE bound to: 0 - type: bool 
+	Parameter PWM_USE bound to: 1 - type: bool 
+	Parameter TRNG_USE bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_cpu' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:35' bound to instance 'neo430_cpu_inst' of component 'neo430_cpu' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'neo430_cpu' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:58]
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+	Parameter DADD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_control' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:35' bound to instance 'neo430_control_inst' of component 'neo430_control' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'neo430_control' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:56]
+	Parameter DADD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-226] default block is never used [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:89]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'ctrl_reg' in module 'neo430_control' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:122]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'am_reg' in module 'neo430_control' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'neo430_control' (1#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_control.vhd:56]
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_reg_file' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_reg_file.vhd:35' bound to instance 'neo430_reg_file_inst' of component 'neo430_reg_file' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'neo430_reg_file' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_reg_file.vhd:56]
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-226] default block is never used [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_reg_file.vhd:163]
+INFO: [Synth 8-256] done synthesizing module 'neo430_reg_file' (2#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_reg_file.vhd:56]
+	Parameter DADD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_alu' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:35' bound to instance 'neo430_alu_inst' of component 'neo430_alu' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'neo430_alu' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:54]
+	Parameter DADD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-226] default block is never used [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:190]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'add_res_reg' in module 'neo430_alu' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:134]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'data_res_reg' in module 'neo430_alu' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:305]
+INFO: [Synth 8-256] done synthesizing module 'neo430_alu' (3#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_alu.vhd:54]
+INFO: [Synth 8-3491] module 'neo430_addr_gen' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_addr_gen.vhd:35' bound to instance 'neo430_addr_gen_inst' of component 'neo430_addr_gen' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'neo430_addr_gen' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_addr_gen.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'neo430_addr_gen' (4#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_addr_gen.vhd:52]
+WARNING: [Synth 8-6014] Unused sequential element rd_ff_reg was removed.  [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'neo430_cpu' (5#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_cpu.vhd:58]
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_imem' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_imem.vhd:39' bound to instance 'neo430_imem_inst' of component 'neo430_imem' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'neo430_imem' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_imem.vhd:56]
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'neo430_imem' (6#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_imem.vhd:56]
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-3491] module 'neo430_dmem' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_dmem.vhd:33' bound to instance 'neo430_dmem_inst' of component 'neo430_dmem' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'neo430_dmem' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_dmem.vhd:47]
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'neo430_dmem' (7#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_dmem.vhd:47]
+INFO: [Synth 8-3491] module 'neo430_boot_rom' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_boot_rom.vhd:37' bound to instance 'neo430_boot_rom_inst' of component 'neo430_boot_rom' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'neo430_boot_rom' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_boot_rom.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neo430_boot_rom' (8#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_boot_rom.vhd:46]
+INFO: [Synth 8-3491] module 'neo430_muldiv' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_muldiv.vhd:39' bound to instance 'neo430_muldiv_inst' of component 'neo430_muldiv' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'neo430_muldiv' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_muldiv.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'neo430_muldiv' (9#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_muldiv.vhd:51]
+INFO: [Synth 8-3491] module 'neo430_wb_interface' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wb_interface.vhd:32' bound to instance 'neo430_wb32_inst' of component 'neo430_wb_interface' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'neo430_wb_interface' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wb_interface.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'neo430_wb_interface' (10#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wb_interface.vhd:53]
+INFO: [Synth 8-3491] module 'neo430_usart' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_usart.vhd:37' bound to instance 'neo430_usart_inst' of component 'neo430_usart' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:396]
+INFO: [Synth 8-638] synthesizing module 'neo430_usart' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_usart.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'neo430_usart' (11#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_usart.vhd:61]
+INFO: [Synth 8-3491] module 'neo430_gpio' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_gpio.vhd:36' bound to instance 'neo430_gpio_inst' of component 'neo430_gpio' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:436]
+INFO: [Synth 8-638] synthesizing module 'neo430_gpio' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_gpio.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'neo430_gpio' (12#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_gpio.vhd:53]
+INFO: [Synth 8-3491] module 'neo430_timer' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_timer.vhd:38' bound to instance 'neo430_timer_inst' of component 'neo430_timer' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:465]
+INFO: [Synth 8-638] synthesizing module 'neo430_timer' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_timer.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'neo430_timer' (13#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_timer.vhd:55]
+INFO: [Synth 8-3491] module 'neo430_wdt' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wdt.vhd:38' bound to instance 'neo430_wdt_inst' of component 'neo430_wdt' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:494]
+INFO: [Synth 8-638] synthesizing module 'neo430_wdt' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wdt.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'neo430_wdt' (14#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_wdt.vhd:56]
+INFO: [Synth 8-3491] module 'neo430_crc' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_crc.vhd:35' bound to instance 'neo430_crc_inst' of component 'neo430_crc' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:524]
+INFO: [Synth 8-638] synthesizing module 'neo430_crc' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_crc.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'neo430_crc' (15#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_crc.vhd:47]
+INFO: [Synth 8-3491] module 'neo430_pwm' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_pwm.vhd:38' bound to instance 'neo430_pwm_inst' of component 'neo430_pwm' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:569]
+INFO: [Synth 8-638] synthesizing module 'neo430_pwm' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_pwm.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'neo430_pwm' (16#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_pwm.vhd:55]
+	Parameter CLOCK_SPEED bound to: 100000000 - type: integer 
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+	Parameter USER_CODE bound to: 16'b1100101011111110 
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter MULDIV_USE bound to: 1 - type: bool 
+	Parameter WB32_USE bound to: 1 - type: bool 
+	Parameter WDT_USE bound to: 1 - type: bool 
+	Parameter GPIO_USE bound to: 1 - type: bool 
+	Parameter TIMER_USE bound to: 1 - type: bool 
+	Parameter USART_USE bound to: 1 - type: bool 
+	Parameter CRC_USE bound to: 1 - type: bool 
+	Parameter CFU_USE bound to: 0 - type: bool 
+	Parameter PWM_USE bound to: 1 - type: bool 
+	Parameter TRNG_USE bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neo430_sysconfig' declared at '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_sysconfig.vhd:36' bound to instance 'neo430_sysconfig_inst' of component 'neo430_sysconfig' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:618]
+INFO: [Synth 8-638] synthesizing module 'neo430_sysconfig' [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_sysconfig.vhd:70]
+	Parameter CLOCK_SPEED bound to: 100000000 - type: integer 
+	Parameter IMEM_SIZE bound to: 4096 - type: integer 
+	Parameter DMEM_SIZE bound to: 2048 - type: integer 
+	Parameter USER_CODE bound to: 16'b1100101011111110 
+	Parameter DADD_USE bound to: 1 - type: bool 
+	Parameter MULDIV_USE bound to: 1 - type: bool 
+	Parameter WB32_USE bound to: 1 - type: bool 
+	Parameter WDT_USE bound to: 1 - type: bool 
+	Parameter GPIO_USE bound to: 1 - type: bool 
+	Parameter TIMER_USE bound to: 1 - type: bool 
+	Parameter USART_USE bound to: 1 - type: bool 
+	Parameter CRC_USE bound to: 1 - type: bool 
+	Parameter CFU_USE bound to: 0 - type: bool 
+	Parameter PWM_USE bound to: 1 - type: bool 
+	Parameter TRNG_USE bound to: 0 - type: bool 
+	Parameter BOOTLD_USE bound to: 1 - type: bool 
+	Parameter IMEM_AS_ROM bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'neo430_sysconfig' (17#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_sysconfig.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'neo430_top' (18#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430_ipbus/projects/tests/neotest/firmware/hdl/neo430_top.vhd:114]
+INFO: [Synth 8-256] done synthesizing module 'neo430_test' (19#1) [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/top_templates/firmware/hdl/neo430_test.vhd:50]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port rden_i
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[15]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[14]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[13]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[12]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[11]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[10]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[9]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port data_i[8]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[7]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[5]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[4]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[3]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[2]
+WARNING: [Synth 8-3331] design neo430_pwm has unconnected port clkgen_i[1]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_crc has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port data_i[7]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port data_i[6]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port data_i[5]
+WARNING: [Synth 8-3331] design neo430_wdt has unconnected port data_i[4]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_timer has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_gpio has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_usart has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[7]
+WARNING: [Synth 8-3331] design neo430_muldiv has unconnected port addr_i[0]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port wren_i[1]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port wren_i[0]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[15]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[14]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[13]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[12]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[11]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[10]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[9]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[8]
+WARNING: [Synth 8-3331] design neo430_sysconfig has unconnected port addr_i[7]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:05:15 ; elapsed = 00:05:22 . Memory (MB): peak = 1703.871 ; gain = 404.953 ; free physical = 13696 ; free virtual = 34461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:05:15 ; elapsed = 00:05:23 . Memory (MB): peak = 1703.871 ; gain = 404.953 ; free physical = 13704 ; free virtual = 34469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tfgg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:05:15 ; elapsed = 00:05:23 . Memory (MB): peak = 1712.875 ; gain = 413.957 ; free physical = 13703 ; free virtual = 34468
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'neo430_control'
+INFO: [Synth 8-5546] ROM "spec_cmd_v" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ctrl_nxt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "src_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "irq_ack" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sam_nxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ir_wren" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element rdata_reg was removed.  [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_imem.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element rdata_reg was removed.  [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_dmem.vhd:83]
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element rdata_reg was removed.  [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_boot_rom.vhd:85]
+INFO: [Synth 8-5546] ROM "start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "opa" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "operation" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "wb_addr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wb_we_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wb_wdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "byte_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "baud" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "uart_tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "uart_tx_bitcnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "uart_rx_busy" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_rx_busy" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "uart_rx_bitcnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "spi_irq" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "dout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "irq_mask" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "thres" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "acc_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pwd_ok" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "poly" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "run" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "acc_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pwm_ch[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pwm_ch[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pwm_ch[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "io_acc" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                            00000 |                            00000
+                ifetch_0 |                            00001 |                            00001
+                   irq_0 |                            00010 |                            10100
+                   irq_1 |                            00011 |                            10101
+                   irq_2 |                            00100 |                            10110
+                   irq_3 |                            00101 |                            10111
+                   irq_4 |                            00110 |                            11000
+                   irq_5 |                            00111 |                            11001
+                ifetch_1 |                            01000 |                            00010
+                  decode |                            01001 |                            00011
+                 trans_0 |                            01010 |                            00100
+                 trans_1 |                            01011 |                            00101
+                 trans_3 |                            01100 |                            00110
+                 trans_4 |                            01101 |                            00111
+                 trans_6 |                            01110 |                            01000
+                 trans_7 |                            01111 |                            01001
+              pushcall_0 |                            10000 |                            01100
+              pushcall_1 |                            10001 |                            01101
+              pushcall_2 |                            10010 |                            01110
+                 trans_8 |                            10011 |                            01010
+                 trans_9 |                            10100 |                            01011
+                  reti_0 |                            10101 |                            01111
+                  reti_1 |                            10110 |                            10000
+                  reti_2 |                            10111 |                            10001
+                  reti_3 |                            11000 |                            10010
+                  reti_4 |                            11001 |                            10011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'neo430_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:17 ; elapsed = 00:05:24 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13662 ; free virtual = 34428
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
+	   3 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 7     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               30 Bit    Registers := 1     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 27    
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 14    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 36    
++---RAMs : 
+	              16K Bit         RAMs := 2     
+	               8K Bit         RAMs := 2     
+	              256 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 16    
+	   8 Input     32 Bit        Muxes := 6     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 13    
+	   5 Input     30 Bit        Muxes := 1     
+	   3 Input     30 Bit        Muxes := 1     
+	   4 Input     30 Bit        Muxes := 1     
+	  26 Input     30 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 2     
+	   8 Input     24 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 30    
+	   8 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	  52 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	  26 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 68    
+	   5 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+	  26 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module neo430_control 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 13    
+	   5 Input     30 Bit        Muxes := 1     
+	   3 Input     30 Bit        Muxes := 1     
+	   4 Input     30 Bit        Muxes := 1     
+	  26 Input     30 Bit        Muxes := 2     
+	  52 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	  26 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 6     
+Module neo430_reg_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---RAMs : 
+	              256 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 7     
+	   8 Input     16 Bit        Muxes := 1     
+Module neo430_alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 4     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module neo430_addr_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+Module neo430_cpu 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module neo430_imem 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              16K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module neo430_dmem 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module neo430_sysconfig 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module neo430_boot_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module neo430_muldiv 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
+Module neo430_wb_interface 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 10    
+	   2 Input     24 Bit        Muxes := 2     
+	   8 Input     24 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 4     
+Module neo430_usart 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 21    
+Module neo430_gpio 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+Module neo430_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
+Module neo430_wdt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module neo430_crc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+Module neo430_pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 4     
+Module neo430_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "ctrl_nxt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "spec_cmd_v" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element rdata_reg was removed.  [/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/src/neo430/rtl/core/neo430_boot_rom.vhd:85]
+INFO: [Synth 8-5546] ROM "operation" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "wb_addr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wb_wdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "baud" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "uart_rx_bitcnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "uart_tx_bitcnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pwd_ok" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "io_acc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (neo430_top_test_inst/\neo430_usart_inst_true.neo430_usart_inst /\uart_tx_sreg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_usart_inst_true.neo430_usart_inst /spi_miso_ff0_reg)
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[11]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[3]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[12]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[4]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[5]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[6]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[7]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\xirq_sync_reg[0] )
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[13]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[14]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[15]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[8]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[0]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_usart_inst_true.neo430_usart_inst/spi_miso_ff1_reg' (FD) to 'neo430_top_test_inst/neo430_usart_inst_true.neo430_usart_inst/spi_miso_ff0_reg'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[9]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[1]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[10]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_gpio_inst_true.neo430_gpio_inst /\in_buf_reg[2] )
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[11]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[11]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[27]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[3]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[3]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[19]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[12]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[12]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[28]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[4]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[4]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[20]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[5]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[5]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[21]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[6]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[6]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[22]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[7]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[7]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[23]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/xirq_sync_reg[1]' (FD) to 'neo430_top_test_inst/xirq_sync_reg[0]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[13]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[13]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[29]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[14]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[14]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[30]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[15]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[15]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[31]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[8]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[8]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[24]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[0]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[0]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[16]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[9]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[9]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[25]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[1]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[1]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[17]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[10]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[10]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[26]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/din_reg[2]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[2]' (FDE) to 'neo430_top_test_inst/neo430_wb32_if_inst_true.neo430_wb32_inst/wb_rdata_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_wb32_if_inst_true.neo430_wb32_inst /\wb_rdata_reg[18] )
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_cpu_inst/neo430_control_inst/ctrl_reg[11]' (FD) to 'neo430_top_test_inst/neo430_cpu_inst/neo430_control_inst/ctrl_reg[26]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[3]' (FDR) to 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[4]' (FDR) to 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[5]' (FDR) to 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[7]' (FDR) to 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[9]' (FDR) to 'neo430_top_test_inst/neo430_sysconfig_inst/data_o_reg[1]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[0]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[15]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[14]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[13]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[12]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[11]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[10]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[9]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[8]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[7]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[6]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[5]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[4]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[3]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[2]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\xirq_sync_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_usart_inst_true.neo430_usart_inst /spi_miso_ff0_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_gpio_inst_true.neo430_gpio_inst /\in_buf_reg[2] )
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/in_buf_reg[2]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_gpio_inst_true.neo430_gpio_inst /\sync_in_reg[1] )
+INFO: [Synth 8-3886] merging instance 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/sync_in_reg[1]' (FD) to 'neo430_top_test_inst/neo430_gpio_inst_true.neo430_gpio_inst/irq_o_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (neo430_top_test_inst/\neo430_gpio_inst_true.neo430_gpio_inst /irq_o_reg)
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[13]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[12]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[11]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[10]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[9]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[7]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[6]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (sreg_reg[5]) is unused and will be removed from module neo430_reg_file.
+WARNING: [Synth 8-3332] Sequential element (wb_rdata_reg[18]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[14]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[13]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[12]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[11]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[10]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[9]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[8]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[7]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[6]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[5]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[4]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[3]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[2]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[1]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (data_o_reg[0]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[31]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[30]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[29]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[28]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[27]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[26]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[25]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[24]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[23]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[22]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[21]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[20]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[19]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[18]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[17]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[16]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[15]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[14]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[13]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[12]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[11]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[10]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[9]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[8]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[7]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[6]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[5]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[4]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[3]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[2]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[1]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_addr_reg[0]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[31]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[30]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[29]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[28]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[27]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[26]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[25]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[24]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[23]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[22]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[21]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[20]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[19]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[18]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[17]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[16]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[15]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[14]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[13]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[12]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[11]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[10]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[9]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[8]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[7]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[6]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[5]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[4]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[3]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[2]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[1]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_wdata_reg[0]) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_we_o_reg) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (wb_stb_o_reg) is unused and will be removed from module neo430_wb_interface.
+WARNING: [Synth 8-3332] Sequential element (ctrl_reg[6]) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (ctrl_reg[3]) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (uart_rx_sreg_reg[0]) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (spi_miso_ff0_reg) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (uart_tx_sreg_reg[9]) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (spi_sclk_o_reg) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (spi_mosi_o_reg) is unused and will be removed from module neo430_usart.
+WARNING: [Synth 8-3332] Sequential element (irq_mask_reg[15]) is unused and will be removed from module neo430_gpio.
+WARNING: [Synth 8-3332] Sequential element (irq_mask_reg[14]) is unused and will be removed from module neo430_gpio.
+WARNING: [Synth 8-3332] Sequential element (irq_mask_reg[13]) is unused and will be removed from module neo430_gpio.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:26 ; elapsed = 00:05:52 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13528 ; free virtual = 34297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+------------+---------------+----------------+
+|Module Name     | RTL Object | Depth x Width | Implemented As | 
++----------------+------------+---------------+----------------+
+|neo430_boot_rom | rdata_reg  | 1024x16       | Block RAM      | 
++----------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|neo430_imem: | imem_file_ram_l_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_imem: | imem_file_ram_h_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_dmem: | dmem_file_l_reg     | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_dmem: | dmem_file_h_reg     | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+|Module Name                                               | RTL Object   | Inference | Size (Depth x Width) | Primitives      | 
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+|neo430_top_test_inst/neo430_cpu_inst/neo430_reg_file_inst | reg_file_reg | Implied   | 16 x 16              | RAM16X1S x 16   | 
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_imem_inst/i_1/imem_file_ram_l_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_imem_inst/i_2/imem_file_ram_h_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_dmem_inst/i_1/dmem_file_l_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_dmem_inst/i_2/dmem_file_h_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_boot_rom_inst_true.neo430_boot_rom_inst/i_0/rdata_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:26 ; elapsed = 00:05:53 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13529 ; free virtual = 34298
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|neo430_imem: | imem_file_ram_l_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_imem: | imem_file_ram_h_reg | 2 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_dmem: | dmem_file_l_reg     | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|neo430_dmem: | dmem_file_h_reg     | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+|Module Name                                               | RTL Object   | Inference | Size (Depth x Width) | Primitives      | 
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+|neo430_top_test_inst/neo430_cpu_inst/neo430_reg_file_inst | reg_file_reg | Implied   | 16 x 16              | RAM16X1S x 16   | 
++----------------------------------------------------------+--------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_imem_inst/imem_file_ram_l_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_imem_inst/imem_file_ram_h_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_dmem_inst/dmem_file_l_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_dmem_inst/dmem_file_h_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance neo430_top_test_inst/neo430_boot_rom_inst_true.neo430_boot_rom_inst/rdata_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:27 ; elapsed = 00:05:53 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13530 ; free virtual = 34299
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13530 ; free virtual = 34299
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13530 ; free virtual = 34299
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13530 ; free virtual = 34299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|neo430_muldiv | enable_reg[15] | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------+----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    37|
+|3     |LUT1     |    11|
+|4     |LUT2     |   135|
+|5     |LUT3     |   228|
+|6     |LUT4     |   125|
+|7     |LUT5     |   190|
+|8     |LUT6     |   319|
+|9     |MUXF7    |    12|
+|10    |RAM16X1S |    16|
+|11    |RAMB18E1 |     5|
+|12    |SRL16E   |     1|
+|13    |FDCE     |    31|
+|14    |FDPE     |     7|
+|15    |FDRE     |   592|
+|16    |FDSE     |     5|
+|17    |IBUF     |     3|
+|18    |OBUF     |     9|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------+--------------------+------+
+|      |Instance                                             |Module              |Cells |
++------+-----------------------------------------------------+--------------------+------+
+|1     |top                                                  |                    |  1727|
+|2     |  neo430_top_test_inst                               |neo430_top          |  1714|
+|3     |    neo430_cpu_inst                                  |neo430_cpu          |   664|
+|4     |      neo430_control_inst                            |neo430_control      |   247|
+|5     |      neo430_reg_file_inst                           |neo430_reg_file     |    69|
+|6     |      neo430_alu_inst                                |neo430_alu          |   224|
+|7     |      neo430_addr_gen_inst                           |neo430_addr_gen     |    87|
+|8     |    neo430_imem_inst                                 |neo430_imem         |    23|
+|9     |    neo430_dmem_inst                                 |neo430_dmem         |    21|
+|10    |    neo430_sysconfig_inst                            |neo430_sysconfig    |    23|
+|11    |    \neo430_boot_rom_inst_true.neo430_boot_rom_inst  |neo430_boot_rom     |    20|
+|12    |    \neo430_muldiv_inst_true.neo430_muldiv_inst      |neo430_muldiv       |   251|
+|13    |    \neo430_wb32_if_inst_true.neo430_wb32_inst       |neo430_wb_interface |    14|
+|14    |    \neo430_usart_inst_true.neo430_usart_inst        |neo430_usart        |   241|
+|15    |    \neo430_gpio_inst_true.neo430_gpio_inst          |neo430_gpio         |    51|
+|16    |    \neo430_timer_inst_true.neo430_timer_inst        |neo430_timer        |   110|
+|17    |    \neo430_wdt_inst_true.neo430_wdt_inst            |neo430_wdt          |    55|
+|18    |    \neo430_crc_inst_true.neo430_crc_inst            |neo430_crc          |   160|
+|19    |    \neo430_pwm_inst_true.neo430_pwm_inst            |neo430_pwm          |     3|
++------+-----------------------------------------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13530 ; free virtual = 34299
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 532 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13532 ; free virtual = 34301
+Synthesis Optimization Complete : Time (s): cpu = 00:05:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1713.879 ; gain = 414.961 ; free physical = 13541 ; free virtual = 34310
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+247 Infos, 209 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:30 ; elapsed = 00:05:56 . Memory (MB): peak = 1786.031 ; gain = 499.566 ; free physical = 13513 ; free virtual = 34282
+INFO: [Common 17-1381] The checkpoint '/usersc/ng18731/ATFC_IPBus_neo_test/neo430_test/myFwArea/proj/neo430_example_1/top/top.runs/synth_1/neo430_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file neo430_test_utilization_synth.rpt -pb neo430_test_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1817.043 ; gain = 0.000 ; free physical = 13512 ; free virtual = 34282
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 29 15:55:34 2018...

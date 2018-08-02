@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connections>
+  <connection id="ATFC" uri="ipbusudp-2.0://192.168.235.136:50001"
+   address_table="file://./addrtab/ipbus_example.xml" />
+</connections>

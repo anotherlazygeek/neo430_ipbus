@@ -1,0 +1,7 @@
+{
+  "topCmp": "projects/tests/neotest", 
+  "toolset": "vivado", 
+  "name": "neo430_example_2", 
+  "topDep": "templates_1.dep", 
+  "topPkg": "neo430_ipbus"
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="gig_eth_pcs_pma_basex_gtp_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1531393339">
+  <File Type="RDS-DCP" Name="gig_eth_pcs_pma_basex_gtp.dcp"/>
+  <File Type="REPORTS-TCL" Name="gig_eth_pcs_pma_basex_gtp_reports.tcl"/>
+  <File Type="PA-TCL" Name="gig_eth_pcs_pma_basex_gtp.tcl"/>
+  <File Type="RDS-RDS" Name="gig_eth_pcs_pma_basex_gtp.vds"/>
+  <File Type="RDS-UTIL" Name="gig_eth_pcs_pma_basex_gtp_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="gig_eth_pcs_pma_basex_gtp_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gig_eth_pcs_pma_basex_gtp">
+    <File Path="$PSRCDIR/sources_1/ip/gig_eth_pcs_pma_basex_gtp/gig_eth_pcs_pma_basex_gtp.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_eth/firmware/cgn/gig_eth_pcs_pma_basex_gtp.xci"/>
+        <Attr Name="ImportTime" Val="1531337642"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gig_eth_pcs_pma_basex_gtp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gig_eth_pcs_pma_basex_gtp">
+    <File Path="$PSRCDIR/sources_1/ip/gig_eth_pcs_pma_basex_gtp/gig_eth_pcs_pma_basex_gtp.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_eth/firmware/cgn/gig_eth_pcs_pma_basex_gtp.xci"/>
+        <Attr Name="ImportTime" Val="1531337642"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gig_eth_pcs_pma_basex_gtp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

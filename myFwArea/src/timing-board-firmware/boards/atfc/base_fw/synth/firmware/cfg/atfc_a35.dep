@@ -1,0 +1,4 @@
+setup settings_v7.tcl
+include atfc_infra.dep
+src -c ipbus-firmware:components/ipbus_core ipbus_package.vhd
+src --cd ../ucf atfc.tcl

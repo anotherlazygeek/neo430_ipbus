@@ -1,0 +1,5 @@
+XSym
+0051
+58345244794fc00224eee09431bcf349
+../../../../components/pdts/software/board_setup.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

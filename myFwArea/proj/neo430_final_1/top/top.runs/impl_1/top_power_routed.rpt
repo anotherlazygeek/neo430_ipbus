@@ -1,0 +1,341 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date             : Wed Jul 18 13:16:23 2018
+| Host             : HP running 64-bit major release  (build 9200)
+| Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+| Design           : top
+| Device           : xc7a35tfgg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.471        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.393        |
+| Device Static (W)        | 0.078        |
+| Effective TJA (C/W)      | 2.8          |
+| Max Ambient (C)          | 83.7         |
+| Junction Temperature (C) | 26.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.031 |       11 |       --- |             --- |
+| Slice Logic              |     0.008 |    12102 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     4728 |     20800 |           22.73 |
+|   Register               |    <0.001 |     5617 |     41600 |           13.50 |
+|   CARRY4                 |    <0.001 |      198 |      8150 |            2.43 |
+|   F7/F8 Muxes            |    <0.001 |      228 |     32600 |            0.70 |
+|   LUT as Distributed RAM |    <0.001 |       32 |      9600 |            0.33 |
+|   LUT as Shift Register  |    <0.001 |       62 |      9600 |            0.65 |
+|   Others                 |     0.000 |      267 |       --- |             --- |
+| Signals                  |     0.009 |     9029 |       --- |             --- |
+| Block RAM                |     0.017 |       21 |        50 |           42.00 |
+| MMCM                     |     0.212 |        2 |         5 |           40.00 |
+| I/O                      |    <0.001 |       19 |       250 |            7.60 |
+| GTP                      |     0.117 |        1 |       --- |             --- |
+| Static Power             |     0.078 |          |           |                 |
+| Total                    |     0.471 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.081 |       0.070 |      0.010 |
+| Vccaux    |       1.800 |     0.130 |       0.117 |      0.013 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
+| MGTAVcc   |       1.000 |     0.061 |       0.059 |      0.001 |
+| MGTAVtt   |       1.200 |     0.045 |       0.042 |      0.003 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                         | Domain                                                                                                | Constraint (ns) |
++---------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-----------------+
+| CLKFBIN                                                                                                       | infra/clocks/CLKFBIN                                                                                  |             8.0 |
+| I                                                                                                             | infra/clocks/I                                                                                        |            32.0 |
+| clk_dc                                                                                                        | infra/eth/clk_dc                                                                                      |            16.0 |
+| clkfbout                                                                                                      | infra/eth/phy/U0/core_clocking_i/clkfbout                                                             |            16.0 |
+| clkout0                                                                                                       | infra/eth/phy/U0/core_clocking_i/clkout0                                                              |             8.0 |
+| clkout1                                                                                                       | infra/eth/phy/U0/core_clocking_i/clkout1                                                              |            16.0 |
+| eth_refclk                                                                                                    | eth_clk_p                                                                                             |             8.0 |
+| infra/eth/phy/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtpe2_i/TXOUTCLK | infra/eth/phy/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/txoutclk |            16.0 |
++---------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------------------+-----------+
+| Name                                                   | Power (W) |
++--------------------------------------------------------+-----------+
+| top                                                    |     0.393 |
+|   infra                                                |     0.381 |
+|     clocks                                             |     0.107 |
+|       clkdiv                                           |    <0.001 |
+|     eth                                                |     0.235 |
+|       mac                                              |     0.004 |
+|         U0                                             |     0.004 |
+|           temac_gbe_v9_0_core                          |     0.004 |
+|             addr_filter_top                            |    <0.001 |
+|               address_filter_inst                      |    <0.001 |
+|                 byte_wide_ram[0].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[1].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[2].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[3].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[4].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[5].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[6].header_field_dist_ram |    <0.001 |
+|                 byte_wide_ram[7].header_field_dist_ram |    <0.001 |
+|                 resync_promiscuous_mode                |    <0.001 |
+|             flow                                       |     0.001 |
+|               pfc_tx                                   |    <0.001 |
+|               rx                                       |    <0.001 |
+|               rx_pause                                 |    <0.001 |
+|               sync_rx_enable                           |    <0.001 |
+|               sync_tx_enable                           |    <0.001 |
+|               tx                                       |    <0.001 |
+|               tx_pause                                 |    <0.001 |
+|                 sync_good_rx                           |    <0.001 |
+|             no_avb_tx_axi_intf.tx_axi_shim             |    <0.001 |
+|             rx_axi_shim                                |    <0.001 |
+|             rxgen                                      |     0.001 |
+|               FCS_CHECK                                |    <0.001 |
+|               FRAME_CHECKER                            |    <0.001 |
+|               FRAME_DECODER                            |    <0.001 |
+|               RX_SM                                    |    <0.001 |
+|             sync_axi_rx_rstn_rx_clk                    |    <0.001 |
+|             sync_glbl_rstn_rx_clk                      |    <0.001 |
+|             sync_glbl_rstn_tx_clk                      |    <0.001 |
+|             sync_int_rx_rst_mgmt_rx_clk                |    <0.001 |
+|             sync_int_tx_rst_mgmt_tx_clk                |    <0.001 |
+|             sync_tx_axi_rstn_tx_clk                    |    <0.001 |
+|             txgen                                      |    <0.001 |
+|               TX_SM1                                   |    <0.001 |
+|                 CRCGEN                                 |    <0.001 |
+|       phy                                              |     0.231 |
+|         U0                                             |     0.231 |
+|           core_clocking_i                              |     0.106 |
+|           core_gt_common_i                             |    <0.001 |
+|           core_gt_common_reset_i                       |    <0.001 |
+|           core_resets_i                                |    <0.001 |
+|           pcs_pma_block_i                              |     0.124 |
+|             gig_eth_pcs_pma_basex_gtp_core             |     0.001 |
+|               gpcs_pma_inst                            |     0.001 |
+|                 MGT_RESET.SYNC_ASYNC_RESET             |    <0.001 |
+|                 RX_GMII_AT_TXOUTCLK.RECEIVER_TXOUTCLK  |    <0.001 |
+|                 RX_GMII_AT_TXOUTCLK.SYNCHRONISATION    |    <0.001 |
+|                 SYNC_SIGNAL_DETECT                     |    <0.001 |
+|                 TRANSMITTER                            |    <0.001 |
+|             sync_block_rx_reset_done                   |    <0.001 |
+|             sync_block_tx_reset_done                   |    <0.001 |
+|             transceiver_inst                           |     0.123 |
+|               gtwizard_inst                            |     0.122 |
+|                 U0                                     |     0.122 |
+|                   gt0_rxresetfsm_i                     |     0.001 |
+|                     sync_RXRESETDONE                   |    <0.001 |
+|                     sync_data_valid                    |    <0.001 |
+|                     sync_mmcm_lock_reclocked           |    <0.001 |
+|                     sync_pll0lock                      |    <0.001 |
+|                     sync_run_phase_alignment_int       |    <0.001 |
+|                     sync_rx_fsm_reset_done_int         |    <0.001 |
+|                     sync_time_out_wait_bypass          |    <0.001 |
+|                   gt0_txresetfsm_i                     |     0.002 |
+|                     sync_PLL0LOCK                      |    <0.001 |
+|                     sync_TXRESETDONE                   |    <0.001 |
+|                     sync_mmcm_lock_reclocked           |    <0.001 |
+|                     sync_run_phase_alignment_int       |    <0.001 |
+|                     sync_time_out_wait_bypass          |    <0.001 |
+|                     sync_tx_fsm_reset_done_int         |    <0.001 |
+|                   gtwizard_i                           |     0.119 |
+|                     gt0_GTWIZARD_i                     |     0.119 |
+|                       gtrxreset_seq_i                  |     0.001 |
+|                         sync_gtrxreset_in              |    <0.001 |
+|                         sync_rst_sync                  |    <0.001 |
+|                         sync_rxpmaresetdone            |    <0.001 |
+|                       rxpmarst_seq_i                   |    <0.001 |
+|                         sync_RXPMARESETDONE            |    <0.001 |
+|                         sync_rst_sync                  |    <0.001 |
+|               reclock_encommaalign                     |    <0.001 |
+|               reclock_rxreset                          |    <0.001 |
+|               reclock_txreset                          |    <0.001 |
+|               reset_wtd_timer                          |    <0.001 |
+|               sync_block_data_valid                    |    <0.001 |
+|     ipbus                                              |     0.039 |
+|       arb_gen.arb                                      |    <0.001 |
+|       trans                                            |     0.002 |
+|         cfg                                            |    <0.001 |
+|         iface                                          |    <0.001 |
+|         sm                                             |     0.001 |
+|       udp_if                                           |     0.037 |
+|         ARP                                            |     0.002 |
+|         IPADDR                                         |    <0.001 |
+|         RARP_block                                     |     0.003 |
+|         clock_crossing_if                              |    <0.001 |
+|         internal_ram                                   |     0.003 |
+|         internal_ram_selector                          |    <0.001 |
+|         internal_ram_shim                              |    <0.001 |
+|         ipbus_rx_ram                                   |     0.005 |
+|         ipbus_tx_ram                                   |     0.007 |
+|         payload                                        |     0.001 |
+|         ping                                           |    <0.001 |
+|         resend                                         |    <0.001 |
+|         rx_byte_sum                                    |    <0.001 |
+|         rx_packet_parser                               |     0.003 |
+|         rx_ram_mux                                     |    <0.001 |
+|         rx_ram_selector                                |    <0.001 |
+|         rx_reset_block                                 |    <0.001 |
+|         rx_transactor                                  |    <0.001 |
+|         status                                         |     0.002 |
+|         status_buffer                                  |     0.003 |
+|         tx_byte_sum                                    |    <0.001 |
+|         tx_main                                        |     0.002 |
+|         tx_ram_selector                                |    <0.001 |
+|         tx_transactor                                  |     0.002 |
+|     stretch                                            |    <0.001 |
+|       clkdiv                                           |    <0.001 |
+|   neo430_test_top_inst                                 |     0.009 |
+|     cmp_i2c_iface                                      |    <0.001 |
+|       bit_controller                                   |    <0.001 |
+|       byte_controller                                  |    <0.001 |
+|       registers                                        |    <0.001 |
+|     neo430_top_std_logic_inst                          |     0.009 |
+|       neo430_top_inst                                  |     0.009 |
+|         neo430_boot_rom_inst_true.neo430_boot_rom_inst |    <0.001 |
+|         neo430_cpu_inst                                |     0.004 |
+|           neo430_addr_gen_inst                         |     0.002 |
+|           neo430_alu_inst                              |    <0.001 |
+|           neo430_control_inst                          |    <0.001 |
+|           neo430_reg_file_inst                         |    <0.001 |
+|             reg_file_reg_0_15_0_0                      |    <0.001 |
+|             reg_file_reg_0_15_10_10                    |    <0.001 |
+|             reg_file_reg_0_15_11_11                    |    <0.001 |
+|             reg_file_reg_0_15_12_12                    |    <0.001 |
+|             reg_file_reg_0_15_13_13                    |    <0.001 |
+|             reg_file_reg_0_15_14_14                    |    <0.001 |
+|             reg_file_reg_0_15_15_15                    |    <0.001 |
+|             reg_file_reg_0_15_1_1                      |    <0.001 |
+|             reg_file_reg_0_15_2_2                      |    <0.001 |
+|             reg_file_reg_0_15_3_3                      |    <0.001 |
+|             reg_file_reg_0_15_4_4                      |    <0.001 |
+|             reg_file_reg_0_15_5_5                      |    <0.001 |
+|             reg_file_reg_0_15_6_6                      |    <0.001 |
+|             reg_file_reg_0_15_7_7                      |    <0.001 |
+|             reg_file_reg_0_15_8_8                      |    <0.001 |
+|             reg_file_reg_0_15_9_9                      |    <0.001 |
+|         neo430_crc_inst_true.neo430_crc_inst           |    <0.001 |
+|         neo430_dmem_inst                               |    <0.001 |
+|         neo430_gpio_inst_true.neo430_gpio_inst         |    <0.001 |
+|         neo430_imem_inst                               |     0.003 |
+|         neo430_muldiv_inst_true.neo430_muldiv_inst     |    <0.001 |
+|         neo430_pwm_inst_true.neo430_pwm_inst           |    <0.001 |
+|         neo430_sysconfig_inst                          |    <0.001 |
+|         neo430_timer_inst_true.neo430_timer_inst       |    <0.001 |
+|         neo430_usart_inst_true.neo430_usart_inst       |    <0.001 |
+|         neo430_wb32_if_inst_true.neo430_wb32_inst      |    <0.001 |
+|         neo430_wdt_inst_true.neo430_wdt_inst           |    <0.001 |
+|     uid_scl_IOBUF_inst                                 |     0.000 |
+|     uid_sda_IOBUF_inst                                 |     0.000 |
+|   slaves                                               |     0.002 |
+|     fabric                                             |    <0.001 |
+|     slave0                                             |    <0.001 |
+|     slave1                                             |    <0.001 |
+|     slave4                                             |    <0.001 |
+|     slave5                                             |    <0.001 |
+|   uc_if_inst                                           |    <0.001 |
+|     uc_spi_interface_inst                              |    <0.001 |
+|     uc_trans                                           |    <0.001 |
+|       ram_in                                           |    <0.001 |
+|         U0                                             |    <0.001 |
+|           inst_blk_mem_gen                             |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen       |    <0.001 |
+|               valid.cstr                               |    <0.001 |
+|                 ramloop[0].ram.r                       |    <0.001 |
+|                   prim_noinit.ram                      |    <0.001 |
++--------------------------------------------------------+-----------+
+
+

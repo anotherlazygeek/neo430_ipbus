@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Thu Aug  2 01:04:25 2018">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="b7ba4cfd04414275b571169a9ee7ac00" type="ProjectID"/>
+<property name="ProjectIteration" value="6" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="2" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="EditPaste" value="1" type="JavaHandler"/>
+<property name="FlipToViewTaskImplementation" value="1" type="JavaHandler"/>
+<property name="LaunchOpenTarget" value="2" type="JavaHandler"/>
+<property name="NewFile" value="3" type="JavaHandler"/>
+<property name="OpenFile" value="7" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="2" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="1" type="JavaHandler"/>
+<property name="RunBitgen" value="2" type="JavaHandler"/>
+<property name="RunImplementation" value="4" type="JavaHandler"/>
+<property name="RunSchematic" value="3" type="JavaHandler"/>
+<property name="RunSynthesis" value="6" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
+<property name="ShowView" value="3" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="3" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="3" type="JavaHandler"/>
+</item>
+<item name="Gui Handlers">
+<property name="BaseDialog_OK" value="17" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="1" type="GuiHandlerData"/>
+<property name="CmdMsgDialog_OK" value="1" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="62" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="20" type="GuiHandlerData"/>
+<property name="GettingStartedView_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="HCodeEditor_SEARCH_TEXT_COMBO_BOX" value="4" type="GuiHandlerData"/>
+<property name="HInputHandler_TOGGLE_LINE_COMMENTS" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_CHECKPOINT" value="10" type="GuiHandlerData"/>
+<property name="MainMenuMgr_CONSTRAINTS" value="12" type="GuiHandlerData"/>
+<property name="MainMenuMgr_EDIT" value="4" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="31" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FLOW" value="1" type="GuiHandlerData"/>
+<property name="MainMenuMgr_IMPORT" value="1" type="GuiHandlerData"/>
+<property name="MainMenuMgr_IP" value="11" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="12" type="GuiHandlerData"/>
+<property name="MainMenuMgr_TEXT_EDITOR" value="12" type="GuiHandlerData"/>
+<property name="MainToolbarMgr_RUN" value="5" type="GuiHandlerData"/>
+<property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="41" type="GuiHandlerData"/>
+<property name="NetlistTreeView_NETLIST_TREE" value="1" type="GuiHandlerData"/>
+<property name="OpenTargetWizard_HOST_NAME" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_NEW_FILE" value="3" type="GuiHandlerData"/>
+<property name="PACommandNames_OPEN_FILE" value="7" type="GuiHandlerData"/>
+<property name="PACommandNames_OPEN_TARGET_WIZARD" value="2" type="GuiHandlerData"/>
+<property name="PACommandNames_RUN_SYNTHESIS" value="3" type="GuiHandlerData"/>
+<property name="PAViews_CODE" value="13" type="GuiHandlerData"/>
+<property name="PAViews_DEVICE" value="5" type="GuiHandlerData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="2" type="GuiHandlerData"/>
+<property name="PAViews_SCHEMATIC" value="3" type="GuiHandlerData"/>
+<property name="ProgramDebugTab_OPEN_TARGET" value="1" type="GuiHandlerData"/>
+<property name="RDICommands_CUT" value="1" type="GuiHandlerData"/>
+<property name="RDICommands_DELETE" value="1" type="GuiHandlerData"/>
+<property name="RunGadget_SHOW_ERROR_AND_CRITICAL_WARNING_MESSAGES" value="1" type="GuiHandlerData"/>
+<property name="SchematicView_PREVIOUS" value="6" type="GuiHandlerData"/>
+<property name="StaleMoreAction_FORCE_UP_TO_DATE" value="2" type="GuiHandlerData"/>
+<property name="StaleMoreAction_OUT_OF_DATE_DETAILS" value="2" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="1" type="GuiHandlerData"/>
+<property name="SyntheticaStateMonitor_CANCEL" value="1" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="11" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="3" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

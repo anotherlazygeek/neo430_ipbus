@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jul 17 17:56:28 2018
+# Process ID: 7282
+# Current directory: /usersc/ng18731/neo430_test/myFwArea/proj/neo430_final_1/top/top.runs/gig_eth_pcs_pma_basex_gtp_synth_1
+# Command line: vivado -log gig_eth_pcs_pma_basex_gtp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gig_eth_pcs_pma_basex_gtp.tcl
+# Log file: /usersc/ng18731/neo430_test/myFwArea/proj/neo430_final_1/top/top.runs/gig_eth_pcs_pma_basex_gtp_synth_1/gig_eth_pcs_pma_basex_gtp.vds
+# Journal file: /usersc/ng18731/neo430_test/myFwArea/proj/neo430_final_1/top/top.runs/gig_eth_pcs_pma_basex_gtp_synth_1/vivado.jou
+#-----------------------------------------------------------
+source gig_eth_pcs_pma_basex_gtp.tcl -notrace
