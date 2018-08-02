@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="synth_1" LaunchDir="C:/Users/USER/Desktop/projects/ATFC_IPBus_neo_test/neo430_test/myFwArea/proj/neo430_example_4/top/top.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-

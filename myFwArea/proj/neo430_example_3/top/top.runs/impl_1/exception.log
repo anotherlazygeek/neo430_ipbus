@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\USER\Desktop\projects\ATFC_IPBus_neo_test\neo430_test\myFwArea\proj\neo430_example_3\top\top.runs\impl_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied
