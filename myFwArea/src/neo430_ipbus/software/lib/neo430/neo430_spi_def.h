@@ -131,8 +131,8 @@ typedef struct neo430_spi_t {
 /* SPI */
 
 /* SPI0 */ 
-#define NEO430_SPI0_ADDRESS                 0xFFFF2400
-#define NEO430_SPI0                         (*((volatile neo430_spi_t*)NEO430_SPI0_ADDRESS))
+#define NEO430_SPI0_ADDRESS                 0xFFA2
+#define NEO430_SPI0                         (*((volatile neo430_spi_t*) NEO430_SPI0_ADDRESS))
 
 
 

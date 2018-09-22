@@ -97,7 +97,7 @@
 //#define reserved (*(REG16 0xFF9E)) // -/-: reserved
 
 // WB32 - 32-bit register access
-#define WB32_RA_32bit (*(REG32 (&WB32_LRA))) // -/w: address for read transfer (+trigger)
+#define WB32_RA_32bit (*(REG32 (&WB32_LRA))) // -/w: address for read transfer (+trigger)      
 #define WB32_WA_32bit (*(REG32 (&WB32_LWA))) // -/w: address for write transfer (+trigger)
 #define WB32_D_32bit  (*(REG32 (&WB32_LD)))  // r/w: read/write data (for 32-bit access)
 #define WB32_D_8bit   (*(REG8  (&WB32_LD)))  // r/w: read/write data (for 8-bit access)
@@ -112,7 +112,7 @@
 
 /* --- Universal Serial Transceiver (USART/USI) --- */
 #define USI_CT      (*(REG16 0xFFA0)) // r/w: control register
-#define USI_SPIRTX  (*(REG16 0xFFA2)) // r/w: spi receive/transmit register
+//#define USI_SPIRTX  (*(REG16 0xFFA2)) // r/w: spi receive/transmit register
 #define USI_UARTRTX (*(REG16 0xFFA4)) // r/w: uart receive/transmit register
 #define USI_BAUD    (*(REG16 0xFFA6)) // r/w: uart baud rate generator value
 

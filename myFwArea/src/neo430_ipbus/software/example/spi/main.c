@@ -6,7 +6,7 @@ bool ConfigurationSpace;
 bool incrementing; 
 //uint32_t Address;
 uint32_t reply;
-
+uint48_t reply_mac;
 
 
 /* ------------------------------------------------------------
@@ -19,7 +19,9 @@ int main(void) {
   uint16_t selection = 0;
   uint32_t uid;
   uint32_t Data;
+  uint48_t Data_mac;
   uint48_t uid_mac; 
+  uint32_t Address;
   // setup UART
   uart_set_baud(BAUD_RATE);
   USI_CT = (1<<USI_CT_EN);
@@ -58,16 +60,24 @@ int main(void) {
       selection = 2;
     if (!strcmp(command, "id"))
       selection = 3;
-    if (!strcmp(command, "write_prom"))
+    if (!strcmp(command, "wprom_ip"))
       selection = 4;
-    if (!strcmp(command, "read_prom"))
+    if (!strcmp(command, "rprom_ip"))
       selection = 5;
-    if (!strcmp(command, "write_bus"))
+    if (!strcmp(command, "wprom_mac"))
       selection = 6;
-    if (!strcmp(command, "read_bus"))
-      selection = 7;
-    if (!strcmp(command, "reset"))
+    if (!strcmp(command, "rprom_mac"))
+      selection = 7;  
+    if (!strcmp(command, "wbus_ip"))
       selection = 8;
+    if (!strcmp(command, "rbus_ip"))
+      selection = 9;
+    if (!strcmp(command, "rbus_mac"))
+      selection = 10;
+    if (!strcmp(command, "rbus_mac"))
+      selection = 11;    
+    if (!strcmp(command, "reset"))
+      selection = 12;
         // execute command
     switch(selection) {
 
@@ -78,14 +88,18 @@ int main(void) {
                       " enable      - enable I2C bridge on Enclustra\n"
                       " id          - Read from E24AA025E48T Unique ID\n"
 
-                      " write_ip    - write 8 hex char (32 bit)  \n"
-                      " read_ip     - read IP address  \n"
+                      " wprom_ip    - write 8 hex char (32 bit)  \n"
+                      " rprom_ip     - read IP address  \n"
                       
-                      "write_mac    - write 12 hex char (48 bit)"
-                      "read_mac     - read mac address"
+                      "wprom_mac    - write 12 hex char (48 bit)"
+                      "rprom_mac     - read mac address"
                       
-                      " write_bus   - write to Bus memory \n"
-                      " read_bus    - read from Bus memory \n"
+                      " wbus_ip   - write to Bus memory \n"
+                      " rbus_ip    - read from Bus memory \n"
+                      
+                      " wbus_mac   - write to Bus memory \n"
+                      " rbus_mac    - read from Bus memory \n"
+                      
 
                       " reset       - reset CPU\n"
                       );
@@ -135,10 +149,10 @@ int main(void) {
         break;
 
       case 8: // write to Bus memory 
-        uart_br_print("\nIPBus write");
+        uart_br_print("\nIPBus write from Prom: IP Address");
         uart_br_print("\n Enter hexadecimal data address on A32: 0x");
         uart_scan(command , 9); // 8 hex chars for address plus '\0'
-        uint32_t Address = hex_str_to_uint32(command);
+        Address = hex_str_to_uint32(command);
         
         uart_br_print("\n Incrementing ? (Y/N)"); 
         uart_scan(command,MAX_CMD_LENGTH); 
@@ -167,7 +181,7 @@ int main(void) {
 
       case 9: // read from Bus memory 
 
-        uart_br_print("\nIPBus Read");
+        uart_br_print("\nIPBus Read: IP Address");
         uart_br_print("\n Enter hexadecimal address on A32: 0x");
         uart_scan(command , 9); // 8 hex chars for address plus '\0'
             Address = hex_str_to_uint32(command);
@@ -195,8 +209,70 @@ int main(void) {
           uart_print_hex_dword(reply);
          
         break;
+        
+      case 10: // write to Bus memory 
+        uart_br_print("\nIPBus write from Prom: MAC Address");
+        uart_br_print("\n Enter hexadecimal data address on A32: 0x");
+        uart_scan(command , 9); // 8 hex chars for address plus '\0'
+        uint32_t Address = hex_str_to_uint32(command);
+        
+        uart_br_print("\n Incrementing ? (Y/N)"); 
+        uart_scan(command,MAX_CMD_LENGTH); 
 
-      case 10: // restart
+        if(!strcmp(command,"Y")){ 
+           incrementing = true;
+          }
+         else{
+           incrementing = false;
+          };
+
+          uart_br_print("\n Use Configuration Space ? (Y/N)"); 
+          uart_scan(command,1); // 8 hex chars for address plus '\0'
+
+         if(!strcmp(command,"Y")){ 
+           ConfigurationSpace = true;
+           }
+          else{
+           ConfigurationSpace = false;
+           };
+         Data_mac=read_mac();
+          spi_ipbus_write_mac (Address , &Data_mac  , 1 , incrementing , ConfigurationSpace );
+         
+
+        break;
+
+      case 11: // read from Bus memory 
+
+        uart_br_print("\nIPBus Read: MAC Address");
+        uart_br_print("\n Enter hexadecimal address on A32: 0x");
+        uart_scan(command , 9); // 8 hex chars for address plus '\0'
+            Address = hex_str_to_uint32(command);
+        
+        uart_br_print("\n Incrementing ? (Y/N)"); 
+        uart_scan(command,MAX_CMD_LENGTH); 
+
+        if(!strcmp(command,"Y")){ 
+           incrementing = true;
+          }
+         else{
+           incrementing = false;
+          };
+
+          uart_br_print("\n Use Configuration Space ? (Y/N)"); 
+          uart_scan(command,1); // 8 hex chars for address plus '\0'
+
+         if(!strcmp(command,"Y")){ 
+           ConfigurationSpace = true;
+           }
+          else{
+           ConfigurationSpace = false;
+           };
+          spi_ipbus_read_mac (Address , &reply_mac , 1 , false , true );
+          uart_print_uint48(reply_mac);
+         
+        break;
+
+      case 12: // restart
         while ((USI_CT & (1<<USI_CT_UARTTXBSY)) != 0); // wait for current UART transmission
         //soft_reset();
         break;

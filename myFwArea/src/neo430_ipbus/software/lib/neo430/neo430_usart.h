@@ -99,6 +99,7 @@ void spi_cs_dis_all(void) {
  * PARAM d byte to be send
  * RETURN received byte
  * ------------------------------------------------------------ */
+/*
 uint8_t spi_trans(uint8_t d) {
 
   USI_SPIRTX = (uint16_t)d; // trigger transfer
@@ -106,7 +107,7 @@ uint8_t spi_trans(uint8_t d) {
 
   return (uint8_t)USI_SPIRTX;
 }
-
+/*
 
 /* ------------------------------------------------------------
  * INFO Set the Baud rate of UART transceiver

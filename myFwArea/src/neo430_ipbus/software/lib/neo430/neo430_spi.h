@@ -72,7 +72,23 @@ uint32_t spi_transfer32 ( uint32_t pData )
   lReturn = Swap32 ( lReturn );
 #endif //BIG_ENDIAN_MCU
   return lReturn;
+  
 }
+
+uint48_t spi_transfer48 ( uint48_t pData )
+{
+  uint48_t lReturn;
+  spi_write ( &NEO430_SPI0, pData.bit[0] );
+  spi_read ( &NEO430_SPI0, &lReturn.bit[0] );
+  spi_write ( &NEO430_SPI0, pData.bit[1] );
+  spi_read ( &NEO430_SPI0, &lReturn.bit[1] );
+  spi_write ( &NEO430_SPI0, pData.bit[2] );
+  spi_read ( &NEO430_SPI0, &lReturn.bit[2] );
+
+  return lReturn;
+}
+
+
 
 int spi_mem_write ( uint32_t* pData, uint32_t pLen )
 {
